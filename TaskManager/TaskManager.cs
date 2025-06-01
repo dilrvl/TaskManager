@@ -69,7 +69,6 @@ namespace TaskManager
             if (e.ColumnIndex == 0 && e.RowIndex >= 0) // Клик по чекбоксу
             {
                 var task = (TaskItem)dataGridViewTasks.Rows[e.RowIndex].DataBoundItem;
-                await _taskService.ToggleTaskCompletionAsync(task.Id);
                 await LoadTasksAsync();
             }
         }
